@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -> se agregaron por que los de diseno nos dicen que esta es la que se debe usar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body{
+            background: gray;
+            margin: 0;     
+            font-family: 'Quicksand', sans-serif;
+        }
+        .product-detail{
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+            padding: 24px;
+            box-sizing: border-box;
+        }
+        .my-order-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .tittle-container{
+            display: flex;
+            align-items: center;
+            padding-bottom: 18px;
+            padding-left: 10px;
+        }
+        .tittle-container img{
+            width: 20px;
+            height: 20px;
+            margin-right: 14px;
+            
+        }
+        .title{
+            font-size: var(--lg);
+            font-weight: bold;
+            margin: 0;
+        }
+        .order{
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            background-color: var(--text-input-field);
+            border-radius: 8px;
+            margin-bottom: 24px;
+            padding: 0 24px ;
+        }
+        .order p:nth-child(1){
+            /* display: grid;     DE ESTA MANERA LA PROPUSE YO
+            grid-template-rows: auto auto; */   
+            display: flex;
+            flex-direction: column;
+        }
+        .order p span:nth-child(1){
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .order p:nth-child(2){
+            text-align: end;
+            font-weight: bold;
+        }
+        .shopping-card {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            
+            margin: 0 0 24px 0;
+            align-items: center;gap: 16px;
+        }
+        .shopping-card a{
+            cursor: pointer;
+        }
+        .shopping-card figure{
+            margin: 0;
+        }
+        .shopping-card figure img {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .shopping-card p:nth-child(2){
+            color: var(--very-light-pink)
+        }
+        .shopping-card p:nth-child(3){
+            font-weight: bold;
+            font-size: var(--md);
+        }
+
+        .primary-button{
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        @media(max-width: 640px){
+            .product-detail{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+   <aside class="product-detail">
+
+    <div class="my-order-content">
+        <div class="tittle-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/545/545680.png" alt="arrow">
+            <p class="title">My order</p>
+        </div>
+        
+        <div class="shopping-card">
+            <figure>
+                <img src="https://images.pexels.com/photos/8526614/pexels-photo-8526614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="product' client">
+            </figure>
+            <p>Kombi</p>
+            <p>25k $</p>
+            <a href="#">
+                <img src="/icons/icon_close.png" alt="close" >
+            </a>
+            
+
+        </div>
+        
+        <div class="shopping-card">
+            <figure>
+                <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="product' client" class="product-img">
+            </figure>
+            <p>Bmw</p>
+            <p>120k $</p>
+            <a href="#">
+                <img src="/icons/icon_close.png" alt="close" >
+            </a>
+        </div>
+        
+        <div class="shopping-card">
+            <figure>
+                <img src="https://images.pexels.com/photos/8532493/pexels-photo-8532493.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="product' client" class="product-img">
+            </figure>
+            <p>Ducati</p>
+            <p>10k $</p>
+            <a href="#">
+                <img src="/icons/icon_close.png" alt="close" >
+            </a>
+
+        </div>
+        
+        <div class="shopping-card">
+            <figure>
+                <img src="https://images.pexels.com/photos/3999194/pexels-photo-3999194.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="product' client" class="product-img">
+            </figure>
+            <p>A90</p>
+            <p>10k $</p>
+            <a href="https://www.google.com/?hl=es">
+                <img src="/icons/icon_close.png" alt="close" >
+            </a>
+
+        </div>
+
+        <div class="order">
+            <p>
+                <span>Total</span>
+            </p>
+            <p>165k $</p>
+        </div>
+
+        <button class="primary-button">
+            Checkout
+        </button>
+    </div>
+        
+   </aside>
+</body>
+</html>
